@@ -18,6 +18,7 @@ fi
 create_symlink "$DOTFILES_DIR/zsh/.zshrc" "$HOME/.zshrc"
 create_symlink "$DOTFILES_DIR/tmux/.tmux.conf" "$HOME/.tmux.conf"
 create_symlink "$DOTFILES_DIR/i3wm/config" "$HOME/.config/i3/config"
+create_symlink "$DOTFILES_DIR/i3wm/polybar.sh" "$HOME/.config/i3/polybar.sh"
 
 mkdir -p "$DOTFILES_DIR/nvim/lua"
 for file in "$HOME/.config/nvim/lua"/*; do
