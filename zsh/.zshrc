@@ -24,3 +24,7 @@ alias shutdown="sudo shutdown -h now"
 alias cls="clear && ls"
 alias c="clear"
 alias begone="find . -mindepth 1 -not -path './.git*' -exec rm -rf {} +"
+
+. "$HOME/.local/bin/env"
+eval "$(uv generate-shell-completion zsh)"
+eval "$(uv generate-shell-completion zsh)"
