@@ -13,7 +13,8 @@ client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 client.background       #FFFFFF
 
 # Set wallpaper using feh
-exec feh --bg-scale ~/Pictures/wallpaper/grayScaleDessert.png
+exec feh --bg-scale ~/Pictures/wallpaper/black.png
+exec --no-startup-id dockd --daemon
 
 # Define the mod key as windows key
 set $mod Mod4
@@ -142,6 +143,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 bindsym $mod+b exec "librewolf"
 
 # Resize windows using the "resize" mode (with $mod+r)
+bindsym $mod+r mode "resize"
 mode "resize" {
     bindsym l resize shrink width 10 px or 10 ppt
     bindsym k resize grow height 10 px or 10 ppt
@@ -157,5 +159,4 @@ mode "resize" {
 }
 
 # Enable resize mode with $mod+r
-bindsym $mod+r mode "resize"
 

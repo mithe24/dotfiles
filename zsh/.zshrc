@@ -1,4 +1,5 @@
 autoload -Uz compinit
+unsetopt beep
 compinit
 compdef _files java
 
