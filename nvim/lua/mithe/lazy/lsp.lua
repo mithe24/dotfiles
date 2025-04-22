@@ -49,14 +49,7 @@ return {
                 ["jdtls"] = function()
                     local lspconfig = require("lspconfig")
                     lspconfig.jdtls.setup {
-                        capabilities = capabilities,
-                        cmd = { vim.fn.stdpath("data") .. "/mason/packages/jdtls/bin/jdtls" },
                         root_dir = lspconfig.util.root_pattern(".git", "pom.xml", "build.gradle", "settings.gradle"),
-                        settings = {
-                            java = {
-                                home = "/usr/bin/java",
-                            }
-                        }
                     }
                 end,
 

@@ -4,23 +4,24 @@ exec --no-startup-id export GTK_THEME="Adwaita:dark"
 # Start Polybar with custom script
 exec_always --no-startup-id ~/.config/i3/polybar.sh &
 
-# Define color schemes for focused, inactive, and unfocused windows
-client.focused          #1F2328 #6E7C7A #FFFFFF #F6C177   #1F2328
-client.focused_inactive #1F2328 #5F676A #FFFFFF #1F2328   #1F2328
-client.unfocused        #1F2328 #1F2328 #FFFFFF ##1F2328   #1F2328
-client.urgent           #1F2328 #900000 #FFFFFF #900000   #900000
-client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
-client.background       #FFFFFF
+# class                 border  bground text    indicator child_border
+client.focused          #282727 #181616 #C5C9C5 #C4746E #282727
+client.focused_inactive #282727 #282727 #C5C9C5 #C4746E #282727
+client.unfocused        #282727 #282727 #C5C9C5 #C4746E #282727
+client.urgent           #282727 #282727 #C5C9C5 #C4746E #282727
+client.placeholder      #282727 #282727 #C5C9C5 #C4746E #282727
 
+client.background       #FFFFFF
 # Set wallpaper using feh
-exec feh --bg-scale ~/Pictures/wallpaper/black.png
+exec feh --bg-scale ~/Pictures/wallpaper/half_dome.jpg
+
 exec --no-startup-id dockd --daemon
 
 # Define the mod key as windows key
 set $mod Mod4
 
 # Set font for window titles and the i3 bar
-font pango:monospace 8
+font pango:FiraCode Nerd Font 10
 
 # Automatically run XDG autostart applications
 exec --no-startup-id dex --autostart --environment i3
