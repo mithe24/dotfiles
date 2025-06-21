@@ -1,0 +1,7 @@
+[user]
+    name = mithe24
+    email = mithe24@student.sdu.dk
+[core]
+    editor = nvim
+[commit]
+    template = /home/mithe/.config/git/gitmessage.txt

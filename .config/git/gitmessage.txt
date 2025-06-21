@@ -1,0 +1,30 @@
+<type>(<scope>): <short summary>
+
+# Summary should be concise (max 72 chars), written in present tense.
+# Keep it clear and descriptive — what is changing and why?
+
+# --------------------------------------------------------
+# Optional body:
+# Use this section to explain the change in more detail.
+# Focus on the *what* and *why*, not the *how* unless needed.
+# Wrap lines at 72 characters.
+# --------------------------------------------------------
+
+# Optional footer:
+# - Mention related issues or PRs (Closes #123, etc.)
+# - Use BREAKING CHANGE: for breaking changes
+
+# --------------------------------------------------------
+# Valid <type> values:
+#
+# feat      - A new feature
+# fix       - A bug fix
+# docs      - Documentation changes only
+# style     - Code style changes (formatting, missing semi-colons, etc.)
+# refactor  - Code changes that neither fix a bug nor add a feature
+# perf      - Performance improvements
+# test      - Adding or updating tests
+# chore     - Changes to build process, tooling, or other non-code tasks
+# ci        - Changes to CI configuration or scripts
+# build     - Changes that affect the build system or external dependencies
+# --------------------------------------------------------

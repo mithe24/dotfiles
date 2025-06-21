@@ -1,0 +1,12 @@
+alias \
+\
+b="qutebrowser" \
+lg="lazygit" \
+v="nvim" \
+ls="eza -a --icons --sort=extension" \
+wifi="nmtui" \
+shutdown="sudo shutdown -h now" \
+cls="clear && ls" \
+c="clear" \
+begone="find . -mindepth 1 -not -path './.git*' -exec rm -rf {} +" \
+o='xdg-open "$1" >/dev/null 2>&1 &' \

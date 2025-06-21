@@ -1,0 +1,104 @@
+{
+    "reload_style_on_change": true,
+    "layer": "top",
+    "spacing": 4,
+    "height": 0,
+
+    "margin-top": 0,
+    "margin-right": 0,
+    "margin-bottom": 0,
+    "margin-left": 0,
+
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+
+    "modules-center": [
+        "clock"
+    ],
+
+    "modules-right": [
+        "tray",
+        "battery#bat0",
+        "battery#bat1",
+        "network",
+        "pulseaudio",
+		"custom/control"
+    ],
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "tooltip": false
+    },
+
+    "tray": {
+        "spacing": 10,
+        "tooltip": false
+    },
+
+    "clock": {
+        "interval": 1,
+        "format": "{:%T}",
+        "tooltip-format": "{:%a, %d %b %Y}",
+        "tooltip": true
+    },
+
+    "battery#bat0": {
+        "interval": 5,
+        "bat": "BAT0",
+        "format": "{icon}  {capacity}%",
+        "format-charging": "   {capacity}%",
+        "format-plugged": "  {capacity}%",
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format-icons": [" ", " ", " ", " ", " "]
+    },
+
+    "battery#bat1": {
+        "interval": 5,
+        "bat": "BAT1",
+        "format": "{icon}  {capacity}%",
+        "format-charging": "  {capacity}%",
+        "format-plugged": "  {capacity}%",
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format-icons": [" ", " ", " ", " ", " "]
+    },
+
+    "network": {
+        "format-wifi" : "{icon}  {essid}",
+        "format-ethernet": "   {ifname}",
+        "on-click": "nmtui",
+        "format-disconnected" : "󰤭   no connection",
+        "interval": 5,
+        "tooltip": false,
+        "format-icons": ["󰤯 ", "󰤟 ", "󰤢 ", "󰤥 ", "󰤨 "]
+    },
+
+    "pulseaudio": {
+        "scroll-step": 5,
+        "max-volume": 150,
+        "format": "{icon}  {volume}%",
+        "format-muted": "   no sound",
+        "format-icons": ["", " ", " "],
+        "nospacing": 1,
+        "on-click": "pwvucontrol",
+        "tooltip": false
+    },
+
+	"custom/control":{
+        "format": "⏻ ",
+        "on-click": "lockscreen",
+        "tooltip": false
+    },
+
+    "custom/weather": {
+        "exec": "curl wttr.in/Odense?format=1",
+        "tooltip": false
+    }
+}
