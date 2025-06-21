@@ -42,8 +42,10 @@ HISTFILE="$XDG_CACHE_HOME/zsh_history"
 HISTCONTROL=ignoreboth
 
 # binds
-bindkey "^a" beginning-of-line
-bindkey "^e" end-of-line
+bindkey "^h" beginning-of-line
+bindkey "^l" end-of-line
+bindkey "^j" backward-word
+bindkey "^k" forward-word
 bindkey "^n" down-line-or-history
 bindkey "^p" up-line-or-history
 

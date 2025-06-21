@@ -47,9 +47,9 @@
     "battery#bat0": {
         "interval": 5,
         "bat": "BAT0",
-        "format": "{icon}  {capacity}%",
-        "format-charging": "   {capacity}%",
-        "format-plugged": "  {capacity}%",
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
         "states": {
             "warning": 30,
             "critical": 15
@@ -60,9 +60,9 @@
     "battery#bat1": {
         "interval": 5,
         "bat": "BAT1",
-        "format": "{icon}  {capacity}%",
-        "format-charging": "  {capacity}%",
-        "format-plugged": "  {capacity}%",
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
         "states": {
             "warning": 30,
             "critical": 15
@@ -71,10 +71,10 @@
     },
 
     "network": {
-        "format-wifi" : "{icon}  {essid}",
-        "format-ethernet": "   {ifname}",
+        "format-wifi" : "{icon} {essid}",
+        "format-ethernet": "  {ifname}",
         "on-click": "nmtui",
-        "format-disconnected" : "󰤭   no connection",
+        "format-disconnected" : "󰤭  no connection",
         "interval": 5,
         "tooltip": false,
         "format-icons": ["󰤯 ", "󰤟 ", "󰤢 ", "󰤥 ", "󰤨 "]
@@ -83,8 +83,8 @@
     "pulseaudio": {
         "scroll-step": 5,
         "max-volume": 150,
-        "format": "{icon}  {volume}%",
-        "format-muted": "   no sound",
+        "format": "{icon} {volume}%",
+        "format-muted": "  no sound",
         "format-icons": ["", " ", " "],
         "nospacing": 1,
         "on-click": "pwvucontrol",

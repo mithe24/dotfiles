@@ -29,5 +29,6 @@ export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME/java"
 export _JAVA_AWT_WM_NONREPARENTING=1
 export PARALLEL_HOME="$XDG_CONFIG_HOME/parallel"
 export FFMPEG_DATADIR="$XDG_CONFIG_HOME/ffmpeg"
+export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 
 export MANPAGER="less -R --use-color -Dd+r -Du+b" # colored man pages

@@ -4,7 +4,7 @@ WALLPAPER="$(realpath "$1")"
 HYPAPER_CONFIG="$HOME/.config/hypr/hyprpaper.conf"
 
 if [[ ! -f "$WALLPAPER" ]]; then
-    echo "❌ Error: File not found: $WALLPAPER"
+    echo "File not found: $WALLPAPER"
     exit 1
 fi
 
@@ -19,5 +19,3 @@ pkill waybar
 pkill hyprpaper
 hyprctl dispatch exec waybar
 hyprctl dispatch exec hyprpaper
-
-echo "✔ Wallpaper applied and color scheme updated from: $WALLPAPER"

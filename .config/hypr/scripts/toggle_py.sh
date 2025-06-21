@@ -1,8 +1,9 @@
 #!/bin/bash
 
-APP_TITLE="lf-term"
+APP_TITLE="python-term"
 TERMINAL="wezterm"
-CMD="$TERMINAL -e zsh -i -c 'print -Pn \"\e]0;$APP_TITLE\a\"; exec lf'"
+CMD="$TERMINAL -e zsh -i -c 'print -Pn \"\e]0;$APP_TITLE\a\"; exec python -q'"
+
 
 # Get window info
 client=$(hyprctl clients -j | jq -r '.[] | select(.title == "'"$APP_TITLE"'")')
