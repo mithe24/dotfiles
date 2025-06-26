@@ -17,8 +17,11 @@ set shellopts '-eu'
 # commands accordingly.
 set ifs "\n"
 
+set previewer ~/.config/lf/previewer
+set cleaner ~/.config/lf/cleaner
+
 # leave some space at the top and the bottom of the screen
-set scrolloff 10
+set scrolloff 8
 
 # Use the `dim` attribute instead of underline for the cursor in the preview pane
 set cursorpreviewfmt "\033[7;2m"
@@ -74,7 +77,7 @@ cmd trash %set -f; mv -t ~/.trash $fx
 # }}
 
 # use '<delete>' key for either 'trash' or 'delete' command
-# map <delete> trash
+ map D trash
 # map <delete> delete
 
 # extract the current file with the right command
@@ -112,4 +115,16 @@ cmd zip ${{
 cmd wal ${{
     wallpaper "$f"
 }}
+cmd fzf_select ${{
+    lf -remote "send select '$(
+        FZF_DEFAULT_COMMAND="find $PWD ! -path '*.git*' ! -path '.'" \
+            fzf --exact --preview-window=nohidden
+    )'"
+}}
 
+map <c-f> fzf_select
+
+# key maps
+map <c-r> reload
+map <c-a> set hidden!
+map gh cd ~

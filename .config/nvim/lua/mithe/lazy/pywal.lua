@@ -119,6 +119,21 @@ return {
                     },
                 },
             },
+            custom_highlights = function(C)
+                return {
+                    all = {
+                        TabLine = {
+                            bg = C.none,
+                            fg = C.color2,
+                        },
+                        TabLineSel = {
+                            bg = C.none,
+                            fg = C.foreground,
+                            styles = { "bold" },
+                        },
+                    }
+                }
+            end
 
         })
     end

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+SCREENSHOT_PATH="/tmp/hyprlock_screenshot.png"
+
+monitor_name=$(hyprctl activeworkspace -j | jq -r ".monitor")
+
+grim -o "$monitor_name" "$SCREENSHOT_PATH"
+
+hyprlock
+

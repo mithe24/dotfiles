@@ -1,0 +1,56 @@
+@import url("/home/mithe/.cache/wal/colors-waybar.css");
+
+#window {
+    background-color: @background-alpha;  /* Use imported color variables directly */
+    box-shadow: 0 10px 15px -3px rgba(0,0,0, 0.1), 0 4px 6px -4px rgba(0,0,0, 0.1);
+    border-radius: 1rem;
+    font-size: 1.2rem;
+}
+
+#window #outer-box {
+    /* You can define the background here if necessary */
+}
+
+#window #outer-box #input {
+    background-color: @background-alpha;
+    color: @foreground;
+    border: none;
+    border-bottom: 1px solid @background-alpha;
+    padding: 0.8rem 1rem;
+    font-size: 1.5rem;
+    border-radius: 1rem 1rem 0 0;
+}
+
+#window #outer-box #input:focus,
+#window #outer-box #input:focus-visible,
+#window #outer-box #input:active {
+    border: none;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+
+#window #outer-box #scroll {
+    /* Customize this box based on your color variables */
+}
+
+#window #outer-box #scroll #inner-box {
+    /* Customize the inner box here if needed */
+}
+
+#window #outer-box #scroll #inner-box #entry {
+    color: @foreground;
+    background-color: @background-alpha;
+    padding: 0.6rem 1rem;
+}
+
+#window #outer-box #scroll #inner-box #entry #img {
+    width: 1rem;
+    margin-right: 0.5rem;
+}
+
+#window #outer-box #scroll #inner-box #entry:selected {
+    color: @foreground;
+    background-color: @color9-alpha;
+    outline: none;
+}
+

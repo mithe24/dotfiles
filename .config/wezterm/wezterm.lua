@@ -1,5 +1,4 @@
 local wezterm = require 'wezterm'
-
 local home = os.getenv("HOME")
 local config = wezterm.config_builder()
 
@@ -11,11 +10,6 @@ config.window_background_opacity = 0.8
 config.warn_about_missing_glyphs = false
 config.exit_behavior = "Close"
 config.window_close_confirmation = "NeverPrompt"
-config.colors = {
-    cursor_fg = "#000000",
-    cursor_bg = "#ffffff",
-    cursor_border = "#ffffff",
-}
 config.window_padding = {
   left = 0,
   right = 0,
