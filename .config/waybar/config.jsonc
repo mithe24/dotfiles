@@ -1,104 +1,98 @@
 {
-    "reload_style_on_change": true,
     "layer": "top",
+    "position": "top",
+    "height": 24,
     "spacing": 4,
-    "height": 0,
-
-    "margin-top": 0,
-    "margin-right": 0,
-    "margin-bottom": 0,
-    "margin-left": 0,
-
-    "modules-left": [
-        "hyprland/workspaces"
-    ],
-
-    "modules-center": [
-        "clock"
-    ],
-
-    "modules-right": [
-        "tray",
-        "battery#bat0",
-        "battery#bat1",
-        "network",
-        "pulseaudio",
-		"custom/control"
-    ],
-
-    "hyprland/workspaces": {
-        "disable-scroll": true,
-        "all-outputs": true,
-        "tooltip": false
+    "modules-left": ["hyprland/workspaces", "pulseaudio", "backlight", "network", "custom/updates"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["cpu", "memory", "temperature", "battery", "tray", "clock"],
+     "hyprland/workspaces": {
+         "disable-scroll": true,
+         "on-click": "activate",
+         "format": "{name}",
+         "on-scroll-up": "hyprctl dispatch workspace m-1 > /dev/null",
+         "on-scroll-down": "hyprctl dispatch workspace m+1 > /dev/null",
+     },
+    "hyprland/window": {
+        "max-length": 50,
+        "separate-outputs": true
     },
-
     "tray": {
-        "spacing": 10,
-        "tooltip": false
+        "spacing": 0
     },
-
     "clock": {
-        "interval": 1,
-        "format": "{:%T}",
-        "tooltip-format": "{:%a, %d %b %Y}",
-        "tooltip": true
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
     },
-
-    "battery#bat0": {
-        "interval": 5,
-        "bat": "BAT0",
-        "format": "{icon}  {capacity}%",
-        "format-charging": "   {capacity}%",
-        "format-plugged": "  {capacity}%",
-        "states": {
-            "warning": 30,
-            "critical": 15
-        },
-        "format-icons": [" ", " ", " ", " ", " "]
+    "cpu": {
+        "format": "{usage}%  ",
+        "tooltip": false
     },
-
-    "battery#bat1": {
-        "interval": 5,
-        "bat": "BAT1",
-        "format": "{icon}  {capacity}%",
-        "format-charging": "  {capacity}%",
-        "format-plugged": "  {capacity}%",
-        "states": {
-            "warning": 30,
-            "critical": 15
-        },
-        "format-icons": [" ", " ", " ", " ", " "]
-    },
-
-    "network": {
-        "format-wifi" : "{icon}  {essid}",
-        "format-ethernet": "   {ifname}",
-        "on-click": "nmtui",
-        "format-disconnected" : "󰤭   no connection",
-        "interval": 5,
+    "memory": {
         "tooltip": false,
-        "format-icons": ["󰤯 ", "󰤟 ", "󰤢 ", "󰤥 ", "󰤨 "]
+        "format": "{}%  "
     },
-
+    "temperature": {
+        "critical-threshold": 80,
+        "format": "{temperatureC}°C {icon}",
+        "tooltip": false,
+        "format-icons": ["", "", ""]
+    },
+    "backlight": {
+        "format": "{percent}% {icon}",
+        "format-icons": ["󱃓 ", "󰪞 ", "󰪟 ", "󰪠 ", "󰪡 ", "󰪢 ", "󰪣 ", "󰪤 ", "󰪥 "],
+        "tooltip": false
+    },
+    "battery": {
+        "interval": 5,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        "format-icons": [" ", " ", " ", " ", " "]
+    },
+    "battery#bat2": {
+        "bat": "BAT2"
+    },
+    "network": {
+        "format-wifi": "{essid} {icon}",
+        "format-ethernet": "{ipaddr}/{cidr}  ",
+        "tooltip-format": "{ifname} via {gwaddr}  ",
+        "format-linked": "{ifname} (No IP) 󰤩 ",
+        "format-disconnected": "Disconnected 󰤭 ",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "format-icons": ["󰤟 ", "󰤢 ", "󰤥 ", "󰤨 "]
+    },
     "pulseaudio": {
-        "scroll-step": 5,
-        "max-volume": 150,
-        "format": "{icon}  {volume}%",
-        "format-muted": "   no sound",
-        "format-icons": ["", " ", " "],
-        "nospacing": 1,
-        "on-click": "pwvucontrol",
-        "tooltip": false
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": "  {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": " ",
+        "format-icons": {
+            "headphone": "󰋋",
+            "hands-free": "",
+            "headset": "󰋎",
+            "phone": "",
+            "portable": "",
+            "car": " ",
+            "default": [" ", " ", " "]
+        },
+        "on-click": "pavucontrol"
     },
-
-	"custom/control":{
-        "format": "⏻ ",
-        "on-click": "lockscreen",
-        "tooltip": false
-    },
-
-    "custom/weather": {
-        "exec": "curl wttr.in/Odense?format=1",
-        "tooltip": false
+    "custom/updates": {
+        "format": "{} {icon}",
+        "return-type": "json",
+        "format-icons": {
+            "has-updates": "󱍷",
+            "updated": "󰂪"
+        },
+        "exec-if": "which waybar-module-pacman-updates",
+        "exec": "waybar-module-pacman-updates --interval-seconds 5 --network-interval-seconds 300 --tooltip-align-columns 'Source Code Pro' --color-semver-updates F15D22,FFCE51,73C48F,48B9C7,88807C"
     }
 }

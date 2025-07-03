@@ -1,0 +1,61 @@
+@import url("/home/mithe/.cache/wal/colors-waybar.css");
+
+/* The name of the window itself */
+#window {
+    background-color: @color4;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    font-size: 1.2rem;
+
+    #outer-box {
+        /* The name of the search bar */
+        #input {
+            background-color: @background;
+            color: @foreground;
+            border: none;
+            border-bottom: 1px solid @background-alpha;  /* Use color0 for border */
+            padding: 0.8rem 1rem;
+            font-size: 1.5rem;
+            border-radius: 1rem 1rem 0 0;
+
+            &:focus, &:focus-visible, &:active {
+                border: none;
+                outline: 2px solid transparent;
+                outline-offset: 2px;
+            }
+        }
+
+        /* The name of the scrolled window containing all of the entries */
+        #scroll {
+            #inner-box {
+                /* The name of all entries */
+                #entry {
+                    color: @foreground;
+                    background-color: @background-alpha;
+                    padding: 0.6rem 1rem;
+
+                    /* The name of all images in entries displayed in image mode */
+                    #img {
+                        width: 1rem;
+                        margin-right: 0.5rem;
+                    }
+
+                    /* The name of all the text in entries */
+                    #text {}
+
+                    &:selected {
+                        color: @foreground;
+                        background-color: @color9-alpha;  /* Use foreground with transparency */
+                        outline: none;
+                    }
+                }
+
+                /* The name of all boxes shown when expanding entries with multiple actions */
+                #expander-box {
+                    /* You can style this box here */
+                }
+            }
+        }
+    }
+}
+

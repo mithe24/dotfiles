@@ -1,7 +1,7 @@
 /* Pywal Waybar CSS Template */
 
-@define-color foreground {color7};
-@define-color background {color0};
+@define-color foreground {foreground};
+@define-color background {background};
 @define-color cursor {color7};
 
 @define-color color0 {color0};
@@ -22,3 +22,5 @@
 @define-color color15 {color15};
 
 @define-color background-alpha rgba({background.rgb}, 0.8);
+@define-color foreground-alpha rgba({foreground.rgb}, 0.8);
+@define-color color9-alpha rgba({color9.rgb}, 0.8);

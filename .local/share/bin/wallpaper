@@ -1,0 +1,19 @@
+#!/bin/bash
+
+WALLPAPER="$(realpath "$1")"
+HYPAPER_CONFIG="$HOME/.config/hypr/hyprpaper.conf"
+
+if [[ ! -f "$WALLPAPER" ]]; then
+    echo "File not found: $WALLPAPER"
+    exit 1
+fi
+
+wal -i "$WALLPAPER"
+
+{
+  echo "preload = $WALLPAPER"
+  echo "wallpaper = , $WALLPAPER"
+} > "$HYPAPER_CONFIG"
+
+sleep 1
+hyprctl reload
