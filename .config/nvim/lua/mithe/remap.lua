@@ -9,6 +9,3 @@ vim.api.nvim_set_keymap('n', '<Leader>e', ':lua vim.diagnostic.open_float()<CR>'
 vim.api.nvim_set_keymap('n', '<leader>pf', ':FzfLua files<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<C-p>', ':FzfLua git_files<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>ps', ':FzfLua grep<CR>', { noremap = true, silent = true })
-vim.keymap.set("n", "gt", ":bnext<CR>")
-vim.keymap.set("n", "gT", ":bprevious<CR>")
-vim.keymap.set("n", "gQ", ":bdelete<CR>")

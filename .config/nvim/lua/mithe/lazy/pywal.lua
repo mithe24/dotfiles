@@ -88,7 +88,7 @@ return {
                 dadbod_ui = true,
                 treesitter = true,
                 mini = {
-                    tabline = true
+                    tabline = false
                 },
                 nvim_cmp = true,
                 dashboard = false,

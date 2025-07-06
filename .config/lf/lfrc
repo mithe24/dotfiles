@@ -113,7 +113,7 @@ cmd zip ${{
 }}
 
 cmd wal ${{
-    wallpaper "$f"
+    wal -i "$f" -o "$XDG_CONFIG_HOME/wal/scripts/hooks.sh" -n
 }}
 cmd fzf_select ${{
     lf -remote "send select '$(

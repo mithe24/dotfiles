@@ -1,0 +1,28 @@
+{
+    "checksum": "5e9c7f7921ffd396ff4ead1dc3bf2a62",
+    "wallpaper": "/home/mithe/Pictures/wallpaper/infrared-grass.png",
+    "alpha": "100",
+    "special": {
+        "background": "#0c111b",
+        "foreground": "#c2c3c6",
+        "cursor": "#c2c3c6"
+    },
+    "colors": {
+        "color0": "#0c111b",
+        "color1": "#0474BA",
+        "color2": "#058BB4",
+        "color3": "#04A3D4",
+        "color4": "#04ADD5",
+        "color5": "#05CEEE",
+        "color6": "#1FDBF3",
+        "color7": "#c2c3c6",
+        "color8": "#5b626f",
+        "color9": "#0474BA",
+        "color10": "#058BB4",
+        "color11": "#04A3D4",
+        "color12": "#04ADD5",
+        "color13": "#05CEEE",
+        "color14": "#1FDBF3",
+        "color15": "#c2c3c6"
+    }
+}
