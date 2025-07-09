@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 SCREENSHOT_PATH="/tmp/hyprlock_screenshot.png"
 MONITOR_NAME=$(hyprctl activeworkspace -j | jq -r ".monitor")

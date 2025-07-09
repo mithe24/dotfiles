@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # ========= CONFIG =========
 CMD="$1"
@@ -47,6 +47,8 @@ if [[ -f "$CACHE_FILE" ]]; then
                 move_window_to_ws "$WID" "$CURRENT_WS"
                 hyprctl dispatch focuswindow address:"$WID"
                 hyprctl dispatch bringactivetotop
+                hyprctl dispatch resizeactive exact "$FLOAT_WIDTH"%" "$FLOAT_HEIGHT"%"
+                hyprctl dispatch centerwindow address:$WID
             elif [[ "$PID" != "$FOCUSED_PID" ]]; then
                 hyprctl dispatch focuswindow address:"$WID"
                 hyprctl dispatch bringactivetotop
