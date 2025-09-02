@@ -5,6 +5,12 @@ return {
     config = function ()
         require("fzf-lua").setup({
             winopts = {},
+            files = {
+                previewer = false,
+            },
+            grep = {
+                previewer = false,
+            },
             keymap = {},
             actions = {},
             fzf_colors = {},

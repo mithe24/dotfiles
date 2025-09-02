@@ -154,6 +154,7 @@ return {
                     { name = "nvim_lua" },
                     { name = "luasnip" },
                     { name = "path" },
+                    { name = 'render-markdown' },
                 }, {
                         { name = "buffer" },
                     }),
