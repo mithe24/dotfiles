@@ -1,0 +1,19 @@
+# Zsh startup profiler
+# Run: start a new shell, you'll see timing breakdowns
+
+# Load profiler
+zmodload zsh/zprof
+
+# Print results when the shell is ready
+# (run after all other rc.d scripts)
+autoload -Uz add-zsh-hook
+
+zprof-dump() {
+  echo
+  echo "===== Zsh Startup Profile ====="
+  zprof | head -40   # show top 40 slowest functions
+  echo "================================"
+}
+
+add-zsh-hook precmd zprof-dump
+
