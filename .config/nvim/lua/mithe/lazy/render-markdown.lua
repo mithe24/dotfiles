@@ -144,6 +144,18 @@ return {
                 above = 0,
                 below = 0,
             },
+
+            latex = {
+                enabled = true,
+                render_modes = true,
+                converter = 'utftex',
+                highlight = 'RenderMarkdownMath',
+                position = 'below',
+                top_pad = 1,
+                bottom_pad = 0,
+                virtual = false,
+
+            }
         })
     end
 }

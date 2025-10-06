@@ -24,7 +24,7 @@ return {
             -- It's worth noting that this options works better in conjunction with `dim_inactive`.
             show_split_lines = true,
 
-            no_italic = false, -- Force no italic.
+            no_italic = true, -- Force no italic.
             no_bold = false, -- Force no bold.
             no_underline = false, -- Force no underline.
             no_undercurl = false, -- Force no undercurl.
@@ -32,12 +32,12 @@ return {
 
             -- Handles the styling of certain highlight groups (see `:h highlight-args`).
             styles = {
-                comments = { "italic" },
-                conditionals = { "italic" },
+                comments = {},
+                conditionals = {},
                 loops = {},
                 functions = {},
                 keywords = {"bold"},
-                includes = { "italic" },
+                includes = {},
                 strings = {},
                 variables = {},
                 numbers = {},

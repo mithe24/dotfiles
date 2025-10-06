@@ -115,6 +115,10 @@ return {
                 }
             })
 
+            lspconfig.clangd.setup({
+                cmd = {'clangd', '--background-index', '--clang-tidy', '--log=verbose'},
+            })
+
             local cmp_select = { behavior = cmp.SelectBehavior.Select }
             local lspkind = require("lspkind")
             cmp.setup({
